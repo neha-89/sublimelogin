@@ -3,7 +3,7 @@ import { Form, Button } from 'semantic-ui-react';
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router';
 
-export default function FormValidation() {
+export default function Sigin() {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
         let navigate = useNavigate();
