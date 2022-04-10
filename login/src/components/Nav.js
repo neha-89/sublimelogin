@@ -7,7 +7,7 @@ export default function Nav(){
          <ul className="nav-ul">
              {/* <li><Link to="/home">Home </Link></li> */}
              <li><Link to="/login">Login </Link></li>
-             <li><Link to="/register">Register </Link></li>
+             <li><Link to="/signin">Signin </Link></li>
              {/* <li><Link onCLick="" to="/register">Logout</Link></li> */}
             
          </ul>

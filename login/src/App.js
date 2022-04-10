@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Registration from './components/RegistrationForm';
+import Signin from './components/Signin';
 import Login from './components/Login';
-import Home from './components/Home';
+import Profile from './components/Profile';
 import Nav from "./components/Nav";
 import './App.css';
 
@@ -13,7 +13,7 @@ function App() {
      <Nav />
      <Routes>
         <Route path="/profile" element={<Profile />} />
-        <Route path="/signin" element={<Sigin />}/>
+        <Route path="/signin" element={<Signin />}/>
         <Route path="/login" element={<Login />}/>
      </Routes>
      </BrowserRouter>

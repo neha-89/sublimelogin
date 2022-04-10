@@ -3,10 +3,11 @@ import { Form, Button } from 'semantic-ui-react';
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router';
 
-export default function Sigin() {
+export default function Signin() {
+    let navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
-        let navigate = useNavigate();
+        
         navigate('/login')
         console.log(data);
     }
