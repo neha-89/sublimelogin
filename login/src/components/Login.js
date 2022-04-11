@@ -7,12 +7,15 @@ export default function Login() {
     let navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
+        
         if(data.email === 'test@gmail.com' && data.password ==='Testing@123'){
             navigate('/Profile')
             console.log(" You Are Successfully Logged In");
+            alert("You Are Successfully Logged In");
         }
         else{
             console.log("Email or Password is not matching with our record");
+            alert("Email or Password is not matching with our record");
         }
     }
   

@@ -7,9 +7,16 @@ export default function Signin() {
     let navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
-        
+        localStorage.setItem(data ,JSON.stringify({
+            firstName : data.firstName,
+            lastName : data.lastName,
+            email : data.email,
+            password : data.password
+
+        }));
         navigate('/login')
         console.log(data);
+        alert("Sigin Successfull");
     }
     return (
         <div>
