@@ -9,7 +9,7 @@ export default function Login() {
     const onSubmit = (data) => {
         
         if(data.email === 'test@gmail.com' && data.password ==='Testing@123'){
-            navigate('/Profile')
+            navigate('/profile')
             console.log(" You Are Successfully Logged In");
             alert("You Are Successfully Logged In");
         }
@@ -18,7 +18,7 @@ export default function Login() {
             alert("Email or Password is not matching with our record");
         }
     }
-  
+   
     return (
         <div>
             <Form onSubmit={handleSubmit(onSubmit)}>
@@ -49,6 +49,7 @@ export default function Login() {
                 {errors.password && <p className="text-error">Please check the Password</p>}
                 <Button type='submit'>Submit</Button>
             </Form>
+            
         </div>
     )
 }

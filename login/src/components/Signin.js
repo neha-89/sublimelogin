@@ -7,7 +7,7 @@ export default function Signin() {
     let navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
-        localStorage.setItem(data ,JSON.stringify({
+        localStorage.setItem(data, JSON.stringify({
             firstName : data.firstName,
             lastName : data.lastName,
             email : data.email,
@@ -60,6 +60,18 @@ export default function Signin() {
                         {...register("password", {
                             required: true,
                             pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/
+                        })}
+                    />
+                </Form.Field>
+                {errors.password && <p className="text-error">Please check the Password</p>}
+                <Form.Field>
+                    <label>Phone</label>
+                    <input
+                        placeholder='Phone'
+                        type="text"
+                        {...register("text", {
+                            required: true,
+                            pattern: /^[0-9]*$/
                         })}
                     />
                 </Form.Field>

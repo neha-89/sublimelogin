@@ -2,8 +2,8 @@ import React, { useState} from "react";
 
 export default function Profile() {
 	const [file, setFile] = useState();
-	const data = JSON.stringify(localStorage.getItem('data'));
-    console.log(data);
+    const userData = JSON.parse(localStorage.getItem("userdata"));
+	console.log(userData);
 	function handleChange(e) {
 		console.log(e.target.files);
 		setFile(URL.createObjectURL(e.target.files[0]));
