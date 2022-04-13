@@ -17,7 +17,7 @@ export default function Profile() {
             <p>firstName : 
 				lastName : 
 				email :
-				password :
+				phone :
 			</p>
 		</div>
 
