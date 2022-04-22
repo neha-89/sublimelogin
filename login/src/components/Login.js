@@ -1,14 +1,16 @@
-import React from 'react';
+import React ,{useState}from 'react';
 import { Form, Button } from 'semantic-ui-react';
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router';
 
 export default function Login() {
+
     let navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
         
         if(data.email === 'test@gmail.com' && data.password ==='Testing@123'){
+            
             navigate('/profile')
             console.log(" You Are Successfully Logged In");
             alert("You Are Successfully Logged In");
@@ -18,7 +20,7 @@ export default function Login() {
             alert("Email or Password is not matching with our record");
         }
     }
-   
+    
     return (
         <div>
             <Form onSubmit={handleSubmit(onSubmit)}>
